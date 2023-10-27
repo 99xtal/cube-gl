@@ -9,6 +9,6 @@ add_subdirectory(lib/glfw)
 
 find_package(OpenGL REQUIRED)
 
-add_executable(cube src/main lib/glad/src/gl.c)
+add_executable(cube src/main src/Shader lib/glad/src/gl.c)
 include_directories(lib/glad/include)
 target_link_libraries(cube glfw OpenGL::GL)

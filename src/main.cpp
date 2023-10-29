@@ -5,7 +5,7 @@
 #include "Shader.hpp"
 
 #define WINDOW_WIDTH 800
-#define WINDOW_HEIGHT 600
+#define WINDOW_HEIGHT 800
 
 void error_callback(int error, const char* description);
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
@@ -45,8 +45,8 @@ int main() {
     printf("Loaded OpenGL %d.%d\n", GLAD_VERSION_MAJOR(version), GLAD_VERSION_MINOR(version));
 
     Shader *basicShader = new Shader();
-    basicShader->loadFromFile(GL_VERTEX_SHADER, "/Users/jrybarczyk/cube-gl/src/basic.vs");
-    basicShader->loadFromFile(GL_FRAGMENT_SHADER, "/Users/jrybarczyk/cube-gl/src/basic.fs");
+    basicShader->loadFromFile(GL_VERTEX_SHADER, "./resources/shaders/basic.vs");
+    basicShader->loadFromFile(GL_FRAGMENT_SHADER, "./resources/shaders/basic.fs");
     basicShader->createAndLinkProgram();
 
     float squareVertices[] = {
